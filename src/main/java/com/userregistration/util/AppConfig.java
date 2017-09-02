@@ -1,7 +1,7 @@
 package com.userregistration.util;
 
 /**
- * Created by Travis Brindley on 7/21/2017.
+ * Created by Travis Brindley on 9/1/2017.
  */
 
 import org.springframework.context.annotation.Bean;

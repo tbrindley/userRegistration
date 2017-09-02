@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Order;
 
 import java.util.ArrayList;
 
@@ -21,7 +22,7 @@ public class UserFactory {
 
         //criteria is used to create the query
         Criteria users = selectCustomer.createCriteria(Users.class);
-
+        users.addOrder(Order.desc("dateEntered"));
         return (ArrayList<Users>) users.list();
     }
     public static void addUser(String firstName, String lastName, String address1, String address2, String city, String state, String zip){
