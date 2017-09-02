@@ -12,16 +12,16 @@
 </head>
 <body>
 <a href="/newuser">Add User</a> | <a href="/"> Admin Report</a>
-<form action="addUser" method="post">
+<form name="adduser" action="addUser" onsubmit="return validateCreateUser()" method="post">
     <label>First Name:</label>
-    <input type="text" name="firstname" required> <br>
+    <input type="text" name="firstname" maxlength="30" required> <br>
     <label>Last Name:</label>
-    <input type="text" name="lastname" required> <br>
+    <input type="text" name="lastname" maxlength="30" required> <br>
 
     <label>Address 1:</label>
-    <input type="text" name="address1" required> <br>
+    <input type="text" name="address1" maxlength="60" required> <br>
     <label>Address 2:</label>
-    <input type="text" name="address2"> <br>
+    <input type="text" name="address2" maxlength="60"> <br>
 
     <label>City:</label>
     <input type="text" name="city" required> <br>
@@ -80,10 +80,11 @@
         <option value="WY">Wyoming</option>
     </select>	 <br>
     <label>Zip:</label>
-    <input type="text" name="zip" required> <br>
+    <input type="text" name="zip" maxlength="10" required> <br>
 
     <input type="submit" value="Add User">
 
 </form>
+<script src="../../webresources/js/formValidation.js"></script>
 </body>
 </html>
