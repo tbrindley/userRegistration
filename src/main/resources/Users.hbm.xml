@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.userregistration.models.Users" table="users" schema="helloworld">
+        <id name="userId">
+            <column name="user_id" sql-type="int(10) unsigned"/>
+        </id>
+        <property name="firstName">
+            <column name="first_name" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="lastName">
+            <column name="last_name" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="address1">
+            <column name="address1" sql-type="varchar(60)" length="60"/>
+        </property>
+        <property name="address2">
+            <column name="address2" sql-type="varchar(60)" length="60" not-null="true"/>
+        </property>
+        <property name="city">
+            <column name="city" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="state">
+            <column name="state" sql-type="char(2)" length="2"/>
+        </property>
+        <property name="zip">
+            <column name="zip" sql-type="char(10)" length="10"/>
+        </property>
+        <property name="country">
+            <column name="country" sql-type="char(2)" length="2"/>
+        </property>
+        <property name="dateEntered">
+            <column name="date_entered" sql-type="timestamp"/>
+        </property>
+    </class>
+</hibernate-mapping>
